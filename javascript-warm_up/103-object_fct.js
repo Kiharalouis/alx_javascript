@@ -5,11 +5,13 @@ const myObject = {
  };
  console.log(myObject);
  
- // Define the incr function as a property of myObject
- myObject.incr = function() {
-   // Increment the value property of myObject
+ // Define the incr function separately
+ function incr() {
    this.value++;
- };
+ }
+ 
+ // Assign the incr function to the myObject object
+ myObject.incr = incr;
  
  // Call the incr function to increment the value property
  myObject.incr();
