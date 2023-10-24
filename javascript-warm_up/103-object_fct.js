@@ -2,14 +2,22 @@
 const myObject = {
    type: 'object',
    value: 12
- };
- console.log(myObject);
- 
- myObject.incr = () => myObject.value++;
- 
- myObject.incr();
- console.log(myObject);
- myObject.incr();
- console.log(myObject);
- myObject.incr();
- console.log(myObject);
+  };
+  console.log(myObject);
+  
+  myObject.incr = function() {
+   this.value++;
+  };
+  
+  myObject.incr();
+  console.log(myObject);
+  myObject.incr();
+  console.log(myObject);
+  myObject.incr();
+  console.log(myObject);
+  
+  
+  { type: 'object', value; 12 }
+  { type: 'object', value; 13, incr; [Function] }
+  { type: 'object', value; 14, incr; [Function] }
+  { type: 'object', value; 15, incr; [Function] }
